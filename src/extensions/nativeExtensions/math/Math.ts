@@ -27,7 +27,7 @@ export default class MathBlock extends AbstractExtension {
 
   get availableActions (): ExtensionActionInterface[] {
     const nativeExtensionName = 'mathblock'
-    const options = this.options
+    // const options = this.options
 
     return [
       {

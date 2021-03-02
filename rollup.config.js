@@ -68,8 +68,9 @@ async function getConfig ({
       format,
       exports: 'named',
       // используется в umd и в iife
-      name: 'tiptapVuetify',
+      name: 'tiptapVuetifyMathlive',
       globals: {
+        mathlive: 'mathlive',
         vue: 'Vue',
         // https://github.com/vuejs/vue-class-component/blob/master/build/build.js
         // 'vue-class-component': 'VueClassComponent',
@@ -84,6 +85,7 @@ async function getConfig ({
     },
     // TODO можно Object.keys(globals)
     external: [
+      'mathlive',
       'vue',
       // 'vue-class-component',
       // 'vue-property-decorator',

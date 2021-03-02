@@ -49,8 +49,8 @@ import { VDialog, VCard, VCardTitle, VCardText, VCardActions, VBtn, VSpacer, VIc
 import I18nMixin from '~/mixins/I18nMixin'
 import { VExpandTransition } from 'vuetify/lib/components/transitions'
 import { COMMON_ICONS } from '~/configs/theme'
-import 'mathlive/dist/mathlive-fonts.css'
-import 'mathlive/dist/mathlive-static.css'
+// import 'mathlive/dist/mathlive-fonts.css'
+// import 'mathlive/dist/mathlive-static.css'
 import MathLive, { MathfieldElement } from 'mathlive'
 import { DOMParser } from 'prosemirror-model'
 
@@ -117,10 +117,11 @@ export default class MathWindow extends mixins(I18nMixin) {
   }
   mounted () {
     console.log('moutend', MathLive)
-    this.mathfield = new MathfieldElement()
-    this.mathfield.setOptions({
+    let temp = new MathfieldElement()
+    temp.setOptions({
       virtualKeyboardMode: 'manual',
     })
+    this.mathfield = temp
     let elem = document.querySelector('#mathInput')
     console.log('ELEM', elem)
     if (elem) {
@@ -130,33 +131,11 @@ export default class MathWindow extends mixins(I18nMixin) {
   }
 
   apply () {
-    // console.log('TODO APPLY', this.mathfield.value)
-    // console.log('Context', this[PROPS.CONTEXT].commands.paragraph)
-    // // console.log('code', this[PROPS.CONTEXT].commands.code)
-    // // this[PROPS.CONTEXT].commands.paragraph(this.mathfield.value)
-    // // this[PROPS.CONTEXT].commands.code(this.mathfield.value)
-    // // this[PROPS.CONTEXT].commands.code_block({ 'text',
-    // //   content: this.mathfield.value
-    // // })
-    // // this[PROPS.CONTEXT].commands.paragraph({
-    // //   content: this.mathfield.value
-    // // })
-    // // this[PROPS.CONTEXT].commands[this[PROPS.NATIVE_EXTENSION_NAME]]({
-    // //   src: this.mathfield.value
-    // // })
-    console.log('EDITOR', this[PROPS.EDITOR])
-    // this[PROPS.EDITOR].commands.addColumnBefore()
-    // this[PROPS.EDITOR].commands.text({ content: this.mathfield.value })
-    // this[PROPS.EDITOR].commands.insertHTML(this.mathfield.value)
-    // insertHTML(this[PROPS.EDITOR], this.mathfield.value)
-    // debugger
-    console.log('ON EST', this[PROPS.EDITOR].state.selection.from)
-    // const from = this[PROPS.EDITOR].state.selection.from
-    // console.log(this.mathfield.value)
-    // this[PROPS.EDITOR].view.dom.innerHTML += '$$' + this.mathfield.value + '$$'
-    // const slice = DOMParser.fromSchema()
     this[PROPS.EDITOR].commands.paragraph()
-    this.insertHTML(this[PROPS.EDITOR], '<p class="test pour custom">$$' + this.mathfield.value + '$$</p>')
+    // tslint:disable-next-line
+    // if (this.mathfield.value) { FONCTIONNE MAIS LINTER PAS CONTENT
+    //   this.insertHTML(this[PROPS.EDITOR], '<p class="test pour custom">$$' + this.mathfield.value + '$$</p>')
+    // }
     this.close()
     this[PROPS.EDITOR].focus()
   }
