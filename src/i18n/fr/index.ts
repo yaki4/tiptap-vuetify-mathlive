@@ -118,7 +118,7 @@ export default {
     Math: {
       buttons: {
         math: {
-          tooltip: 'math'
+          tooltip: 'Fonction mathématique'
         }
       },
       window: { 

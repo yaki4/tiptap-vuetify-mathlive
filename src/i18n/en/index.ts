@@ -38,7 +38,7 @@ export default {
         Math: {
       buttons: {
         math: {
-          tooltip: 'math'
+          tooltip: 'Math function'
         }
       },
       window: { 
