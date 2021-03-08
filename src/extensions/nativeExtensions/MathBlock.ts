@@ -1,4 +1,5 @@
-import { MathBlock as MathBlockOriginal } from 'tiptap-extensions'
+// @ts-ignore
+// import { Node } from 'tiptap'
 import { VuetifyIconsGroups } from '~/configs/theme'
 import VuetifyIcon from '~/extensions/nativeExtensions/icons/VuetifyIcon'
 import I18nText from '~/i18n/I18nText'
@@ -8,9 +9,6 @@ import ExtensionActionRenderBtn from '~/extensions/actions/renders/btn/Extension
 
 // TODO текст перед / после иконки. Сделать через массив: [new VuetifyIcon('code'), new TextForIcon('text')]
 export default class MathBlock extends AbstractExtension {
-  constructor (options) {
-    super(options, MathBlockOriginal)
-  }
 
   get schema() {
     return {

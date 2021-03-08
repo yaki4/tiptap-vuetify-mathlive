@@ -1,7 +1,10 @@
 import { Node } from 'tiptap'
 import { toggleBlockType, setBlockType, textblockTypeInputRule } from 'tiptap-commands'
-import Mathlive, { MathfieldElement } from 'mathlive'
-
+// import Mathlive, { MathfieldElement } from 'mathlive'
+let MathfieldElement = null
+if (window) {
+  MathfieldElement = require('mathlive').MathfieldElement
+}
 export default class MathBlock extends Node {
 
   get name() {
@@ -20,14 +23,14 @@ export default class MathBlock extends Node {
           tag: 'math-field',
           getAttrs: (dom) => {
             // let temp = new MathfieldElement()
-            // console.log('dom de parse', dom)
+            console.log('dom de parse', dom)
             // console.log('test', Mathlive)
             return {class: 'test'}
           }
         }
       ],
       toDOM: (node) => {
-        // console.log('TODNOE', node)
+        console.log('TODNOE', node)
         let temp = new MathfieldElement()
         temp.setOptions({
           virtualKeyboardMode: 'manual'

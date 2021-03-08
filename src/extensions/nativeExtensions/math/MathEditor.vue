@@ -1,45 +1,6 @@
 <template>
-  <v-dialog
-    :value="value"
-    persistent
-    max-width="500px"
-  >
-    <v-card>
-      <v-card-title>
-        <span class="headline">
-          {{ $i18n.getMsg('extensions.Math.window.title') }}
-        </span>
-
-        <v-spacer />
-
-        <v-btn
-          icon
-          @click="close"
-        >
-          <v-icon>{{ COMMON_ICONS.close[$tiptapVuetify.iconsGroup] }}</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text>
-        <div id="mathInput"/>
-      </v-card-text>
-      <v-card-actions>
-        <v-btn
-          text
-          @click="close"
-        >
-          {{ $i18n.getMsg('extensions.Math.window.buttons.close') }}
-        </v-btn>
-
-        <v-btn
-          :disabled="isDisabled"
-          text
-          @click="apply"
-        >
-          {{ $i18n.getMsg('extensions.Math.window.buttons.apply') }}
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-dialog>
+  <div id="mathInput">
+  </div>
 </template>
 
 <script lang="ts">

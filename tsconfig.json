@@ -67,7 +67,7 @@
     "noImplicitAny": false,                   /* Raise error on expressions and declarations with an implied any type. */
     // "noImplicitThis": false,                  /* Raise error on this expressions with an implied any type. */
     // "suppressImplicitAnyIndexErrors": true,/* Suppress --noImplicitAny errors for indexing objects lacking index signatures. See issue #1232 for more details. */
-    "strictNullChecks": true,                 /* In strict null checking mode, the null and undefined values are not in the domain of every type and are only assignable to themselves and any (the one exception being that undefined is also assignable to void). */
+    // "strictNullChecks": true,                 /* In strict null checking mode, the null and undefined values are not in the domain of every type and are only assignable to themselves and any (the one exception being that undefined is also assignable to void). */
     //    "removeComments": true,
 
 

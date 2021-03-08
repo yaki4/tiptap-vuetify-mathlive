@@ -231,9 +231,10 @@ export default class TiptapVuetify extends Vue {
         emptyNodeClass: 'tiptap-vuetify-editor__paragraph--is-empty',
         emptyNodeText: this[PROPS.PLACEHOLDER],
         showOnlyWhenEditable: true
-      }), new MathBlock())
+      }))
     }
-
+    console.log('on pousse le math', MathBlock)
+    extensions.push(new MathBlock())
     this.editor = (new Editor({
       editable: !this[PROPS.DISABLED],
       extensions,

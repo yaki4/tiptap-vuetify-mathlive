@@ -1,6 +1,6 @@
 {
   "name": "tiptap-vuetify-mathlive",
-  "version": "1.0.3",
+  "version": "1.0.12",
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
@@ -14,7 +14,6 @@
     "prosemirror-model": "1.8.2"
   },
   "dependencies": {
-    "mathlive": "^0.59.0",
     "popper.js": "^1.16.1",
     "tiptap": "^1.32.1",
     "tiptap-extensions": "^1.14.0"
@@ -46,6 +45,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
+    "mathlive": "^0.59.0",
     "postcss-preset-env": "^6.6.0",
     "rollup": "^1.7.0",
     "rollup-plugin-alias": "^1.5.1",

@@ -3,7 +3,10 @@ import AbstractExtension from '~/extensions/AbstractExtension'
 import ExtensionActionInterface from '~/extensions/actions/ExtensionActionInterface'
 import { VuetifyIconsGroups } from '~/configs/theme'
 import ExtensionActionRenderBtn from '~/extensions/actions/renders/btn/ExtensionActionRenderBtn.ts'
-import { renderMathInDocument } from 'mathlive'
+// let mathlive = null
+// if (window) {
+//   mathlive = require('mathlive')
+// }
 // A class must inherit from an abstract class
 export default class MyCustomExtension extends AbstractExtension {
   // Our custom class property. It's not necessary.
@@ -31,7 +34,7 @@ export default class MyCustomExtension extends AbstractExtension {
             editor.setOptions({
               editable: this.isEditable
             })
-            renderMathInDocument()
+            // mathlive.renderMathInDocument()
           },
           // Is the button active? This affects the style of the button.
           isActive: () => {
